@@ -43,6 +43,7 @@ const MobileShare = () => {
         var filesArray = [file];
         console.log(navigator.canShare);
 
+  
 
         if(navigator.canShare && navigator.canShare({ files: filesArray })) {
           navigator.share({
@@ -75,7 +76,8 @@ const MobileShare = () => {
   return (
     <div className="share-icon" onClick={handleOnClick}>
       {getData()}
-       <h1> HELLO FUNS</h1>
+      {navigator.canShare ? "CAN SHARE" : "CANT SHARE"}
+       <h1> HELLO VOWZ </h1>
       <ShareComponent />
     </div>
   );
